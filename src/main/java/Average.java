@@ -14,6 +14,21 @@ public class Average {
      * @return the average of all the values of nums.
      */
     public double getAvg(int[] nums){
-        return 0;
+        if (nums.length == 0) {
+            throw new ArithmeticException("Cannot calculate the average of an empty array.");
+        }
+
+        // Initialize a variable to store the sum as a double
+        double sum = 0;
+
+        // Calculate the sum of all numbers in the array
+        for (int num : nums) {
+            sum += num;
+        }
+
+        // Convert the sum to a double and calculate the average
+        double average = sum / nums.length;
+
+        return average;
     }
 }
